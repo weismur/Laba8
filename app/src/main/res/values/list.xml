@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array">
+        <item name="sum">Сумма длины ребер</item>
+        <item name="pp">Площадь поверхности</item>
+        <item name="volume">Объем</item>
+    </string-array>
+</resources>

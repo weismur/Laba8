@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/caption_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="146dp" />
+
+    <TextView
+        android:id="@+id/sideALabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/side_a_text"
+        app:layout_constraintTop_toBottomOf="@+id/caption"
+        tools:layout_editor_absoluteX="77dp" />
+
+    <EditText
+        android:id="@+id/sideA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/sideALabel"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/sideBLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/side_b_text"
+        app:layout_constraintTop_toBottomOf="@+id/sideA"
+        tools:layout_editor_absoluteX="59dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/sideB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/sideBLabel"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/sideCLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/side_c_text"
+        app:layout_constraintTop_toBottomOf="@+id/sideB"
+        tools:layout_editor_absoluteX="112dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/sideC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/sideCLabel"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/array"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/sideC"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/getSolution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="buttonClick"
+        android:text="@string/get_solution_text"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        tools:layout_editor_absoluteX="158dp" />
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/getSolution" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
